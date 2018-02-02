@@ -47,7 +47,7 @@ const appRoutes: Routes = [
   {path: 'product/category/:category', component: CategoryComponent, data:{animation:Math.random()}},
   {path: 'agregar-producto', component: AddProductComponent, data:{animation:Math.random()}},
 ]
-const environment = {
+const environment1 = {
   production: false,
   firebase:{
       apiKey: "AIzaSyAcb5LywJBLAod1bYqg17ggZ2ix1HcxfDI",
@@ -94,7 +94,7 @@ export class CustomStrategy extends RouteReuseStrategy {
     FlashMessagesModule,
     ImageZoomModule,
     FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(),
-    AngularFireModule.initializeApp(environment),    
+    AngularFireModule.initializeApp(environment1),    
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     RouterModule.forRoot(appRoutes),    
