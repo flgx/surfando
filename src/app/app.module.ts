@@ -94,7 +94,7 @@ export class CustomStrategy extends RouteReuseStrategy {
     FlashMessagesModule,
     ImageZoomModule,
     FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(),
-    AngularFireModule.initializeApp(environment1),    
+    AngularFireModule.initializeApp(environment1.firebase),    
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     RouterModule.forRoot(appRoutes),    
