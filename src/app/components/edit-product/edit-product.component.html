@@ -1,0 +1,37 @@
+<a [routerLink]="['/products']">Volver</a>
+<br />
+<h2 class="page-header">Editar producto</h2>
+<form (submit)="onEditSubmit()">
+  <div class="form-group col-xs-6">
+    <label>Titulo de la publicacion</label>
+    <input class="form-control" type="text" [ngClass]="title.length <  3 ? 'red': 'green'"  id="title" placeholder="Escribe un titulo llamativo" [(ngModel)]="title" formControlName="title" required>
+  </div>
+  <div class="form-group col-xs-6">
+    <label>Ciudad</label>
+    <input class="form-control" type="text" [(ngModel)]="city" placeholder="Donde esta este producto?" formControlName="city" required>
+  </div>
+  <div class="form-group col-xs-6">
+    <label>Categoria</label>
+    <select class="form-control" type="text" [(ngModel)]="category"   formControlName="category" required>
+      <option value="surfboards">Surfboards</option>
+      <option value="funboards">Funboards</option>
+      <option value="longboards">Longboards</option>
+      <option value="bodyboards">Bodyboards</option>
+      <option value="trajes">Trajes</option>
+      <option value="accesorios">Apartment</option>
+    </select>
+  </div>
+  <div class="form-group col-xs-6">
+    <label>Precio</label>
+    <input class="form-control" type="text" [(ngModel)]="price" formControlName="price" required>
+  </div>
+
+  <div class="clearfix"></div>
+  <div class="form-group col-xs-6" style="">
+
+    <label>Imagenes</label>
+    <input id="image" formControlName="image" [(ngModel)]="image" (change)="validateImage()" required="required" multiple type="file" >
+  </div>
+  <div class="clearfix"></div>
+  <input type="submit" value="Editar" class="btn btn-success">
+</form>

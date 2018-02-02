@@ -1,0 +1,47 @@
+<div class="container bigheader">
+	<div class="row">
+		<form action="#" id="search">
+            <div class="form-group col-xs-12 ">
+              <input type="text" class="form-control" id="searchinput" placeholder="Busca lo que necesites para surfear..."  [(ngModel)]="search" name="search" (keyup)="searchProps()">
+          </div>
+      </form>			
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let product of products  | orderby:'!$key'; let i = index; "  >
+            <a  [routerLink]="['/product/'+product.$key]" class="cardlink">
+                <div class="card">
+                    <div class="card-image" [style.background-image]="'url(' + product.url + ')'">
+
+                    </div>
+
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col-md-12" style="text-align: center;">
+                                <h4 class="card-title"><strong>${{product.price}}</strong></h4>
+                                <p style="color:grey;font-size: 10px;">{{product.category.toUpperCase()}}</p>
+                                <p style="color:darkslategrey;">{{product.title.substr(0,4)}}</p>
+                            </div>
+                            <div class="col-md-6" style="margin-top: 10px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-action">
+
+                        <i>{{product.displayName}}</i>
+
+                        <img src="{{product.photoURL}}" style="float:left;margin-right:8px;margin-top: -8px;" width="40" class=" img-responsive img-circle" alt="Surfshop online">
+                        <a *ngIf="userstate != null" [routerLink]="['/product/'+product.$key]"></a>
+                        
+                        <a *ngIf="userstate == null" href="#" (click)="login()"><i class="fa fa-heart"></i></a>
+                        <a *ngIf="userstate == null" href="#" (click)="login()">{{userstate}}Ver</a>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-12" *ngIf="count === 0">Not properties found.</div>
+    </div>
+</div>

@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("assets/fonts/raleway/Raleway-Regular.ttf");
+  font-weight: normal;
+  font-style: normal; }@font-face {
+  font-family: "Avenir-Roman";
+  src: url("assets/fonts/avenir/AvenirLTStdRoman.eot");
+  src: url("assets/fonts/avenir/AvenirLTStdRoman.eot?#iefix") format("embedded-opentype"), url("assets/fonts/avenir/AvenirLTStdRoman.ttf?#iefix") format("truetype"), url("assets/fonts/avenir/AvenirLTStdRoman.woff?#iefix") format("woff"), url("assets/fonts/avenir/AvenirLTStdRoman.svg?#iefix") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Avenir-Heavy";
+  src: url("assets/fonts/avenir/AvenirLTStdBlack.eot");
+  src: url("assets/fonts/avenir/AvenirLTStdBlack.eot?#iefix") format("embedded-opentype"), url("assets/fonts/avenir/AvenirLTStdBlack.ttf?#iefix") format("truetype"), url("assets/fonts/avenir/AvenirLTStdBlack.woff?#iefix") format("woff"), url("assets/fonts/avenir/AvenirLTStdBlack.svg?#iefix") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Avenir-Black";
+  src: url("assets/fonts/avenir/AvenirLTStdBlack.eot");
+  src: url("assets/fonts/avenir/AvenirLTStdBlack.eot?#iefix") format("embedded-opentype"), url("assets/fonts/avenir/AvenirLTStdBlack.ttf?#iefix") format("truetype"), url("assets/fonts/avenir/AvenirLTStdBlack.woff?#iefix") format("woff"), url("assets/fonts/avenir/AvenirLTStdBlack.svg?#iefix") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+html,body{
+  font-family: 'Avenir-Roman';
+}
+h1,h2,h3,h4,p,li{
+    font-family: 'Avenir-Roman';
+
+}
+.bigheader{
+  background-color: white;
+  margin:10px auto;
+  padding: 10px;
+  color: black;
+}
+.card .card-image{
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://www.nationalprostaff.com/inc/img/loading.gif');
+        background-color: #cccccc;
+
+}
+.card .card-image img{
+    height: 100%;
+    z-index: 9999;
+
+}
+#search input::-webkit-input-placeholder {
+    color: rgba(155, 155, 155, 0.51);
+    font-size: 20px;
+    font-weight: bold; 
+}
+#search input:-moz-placeholder {
+    /* FF 4-18 */
+    color: rgba(155, 155, 155, 0.51);
+    font-size: 20px;
+    font-weight: bold;
+}
+#search input::-moz-placeholder {
+    /* FF 19+ */
+    color: rgba(155, 155, 155, 0.51);
+    font-size: 20px;
+    font-weight: bold;
+}
+#search input:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(155, 155, 155, 0.51);
+    font-size: 20px;
+    font-weight: bold;
+}
+#search select::-webkit-select-placeholder {
+    color: rgba(155, 155, 155, 0.51);
+    font-size: 20px;
+    font-weight: bold;
+}
+#search select:-moz-placeholder {
+    /* FF 4-18 */
+    color: rgba(155, 155, 155, 0.51);
+    font-size: 20px;
+    font-weight: bold;
+}
+#search select::-moz-placeholder {
+    /* FF 19+ */
+    color: rgba(155, 155, 155, 0.51);
+    font-size: 20px;
+    font-weight: bold;
+}
+#search select:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(155, 155, 155, 0.51);
+    font-size: 20px;
+    font-weight: bold;
+}
+#search input{
+  padding: 30px;
+}
+.red{
+  border-color:#E57373;
+}.green{
+  border-color: #18bc9c;
+}
+.admin-joblist p{
+font-weight: bold;
+}
+.admin-joblist a{
+color:black;
+text-decoration: none;
+}
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+.card span.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image img {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  font-weight: bold;
+  background-color: rgba(0, 44, 44, 0.8);
+
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+  font-weight: bold;
+}
+.card .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 16px;
+}
+.card .card-action a {
+  color: #ffab40;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.card .card-action a:hover {
+  color: #ffd8a6;
+  text-decoration: none;
+}
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+      float: left;
+    z-index: 999999;
+    bottom: 20px;
+    position: fixed;
+    right: 40px;
+
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+      float: left;
+    z-index: 999999;
+    bottom: 20px;
+    position: fixed;
+    right: 40px;
+
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+      float: left;
+    z-index: 999999;
+    bottom: 20px;
+    position: fixed;
+    right: 40px;
+
+}

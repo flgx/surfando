@@ -1,0 +1,53 @@
+<a [routerLink]="['/']">Volver</a>
+<br>
+<div class="row product">
+	<div class="col-md-12">
+		<h2>{{product.title}}</h2>
+
+	</div>
+	<div class="col-md-6">
+		<div class="card">
+			<div class="card-content" >
+				<carousel>
+					<slide *ngFor="let imageUrl of imageUrls">
+						<div class="lala"  [ngStyle]="{'height':'400px','background-image':'url('+imageUrl.url+')','background-position':'center','background-size':'container'}" alt="Tienda de surf online"></div>
+					</slide>
+				</carousel>
+				<div class="col-xs-4" *ngFor="let image of imageUrls" >
+					<img src="{{image.url}}" class=" thumbnail img-responsive" style="height: 100px;" alt="{{image.id}}">
+					<div *ngIf="(af.auth | async)" class="btn btn-danger btn-xs" (click)="onDeleteImage(product.$key,image.id)">x</div>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-5">
+		<h3>Descripcion</h3>
+		<div class="card">
+			<div class="card-content">
+				<p>{{product.description}}</p>
+			</div>
+
+			<div class="card-action">
+				<h3><i class="fa fa-dollar"></i>{{product.price}}</h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-5">
+		<h3>Comentarios</h3>
+		<div class="card">
+			<div class="card-content">
+				<p>20/09/2018 Pedro : {{product.description}}</p>
+				<p>20/09/2018 Pedro : {{product.description}}</p>
+				<p>20/09/2018 Pedro : {{product.description}}</p>
+				<p>20/09/2018 Pedro : {{product.description}}</p>
+				<p>20/09/2018 Pedro : {{product.description}}</p>
+				<p>20/09/2018 Pedro : {{product.description}}</p>
+				<p>20/09/2018 Pedro : {{product.description}}</p>
+				<p>20/09/2018 Pedro : {{product.description}}</p>
+				<p>20/09/2018 Pedro : {{product.description}}</p>
+			</div>
+		</div>
+	</div>
+</div>

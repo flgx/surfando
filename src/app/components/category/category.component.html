@@ -1,0 +1,32 @@
+<div class="container bigheader">
+	<div class="row">
+		<form action="#" id="search">
+		  <div class="form-group col-xs-12 ">
+		    <input type="text" class="form-control" id="searchinput" placeholder="Busca lo que necesites para surfear..."  [(ngModel)]="search" name="search" (keyup)="searchProps()">
+		  </div>
+		</form>			
+	</div>
+</div>
+<div class="clearfix"></div>
+<div class="container">
+    <div class="row">
+            <div class="col-md-4" *ngFor="let product of products  | orderby:'!$key'; let i = index; "  >
+
+                <div class="card">
+                    <div class="card-image" [style.background-image]="'url(' + product.url + ')'">
+
+                    </div>
+
+                    <div class="card-content">
+                        <h4 class="card-title"><strong>{{product.title}}</strong></h4>
+                    </div>
+
+                    <div class="card-action">
+                        <a [routerLink]="['/product/'+product.$key]">+ Info</a>
+                        <a [routerLink]="['/product/'+product.$key]">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        <div class="col-xs-12" *ngIf="count === 0">Aun no hay productos para esta categoria.</div>
+    </div>
+</div>
