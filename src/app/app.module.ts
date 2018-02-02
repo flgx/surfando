@@ -47,6 +47,17 @@ const appRoutes: Routes = [
   {path: 'product/category/:category', component: CategoryComponent, data:{animation:Math.random()}},
   {path: 'agregar-producto', component: AddProductComponent, data:{animation:Math.random()}},
 ]
+const environment = {
+  production: false,
+  firebase:{
+      apiKey: "AIzaSyAcb5LywJBLAod1bYqg17ggZ2ix1HcxfDI",
+      authDomain: "learningvue-9483c.firebaseapp.com",
+      databaseURL: "https://learningvue-9483c.firebaseio.com",
+      projectId: "learningvue-9483c",
+      storageBucket: "learningvue-9483c.appspot.com",
+      messagingSenderId: "52919849178"    
+  }
+};
 export class CustomStrategy extends RouteReuseStrategy {
   shouldDetach(route: ActivatedRouteSnapshot): boolean { return false; }
   store(route: ActivatedRouteSnapshot, detachedTree: DetachedRouteHandle): void {}
@@ -83,7 +94,7 @@ export class CustomStrategy extends RouteReuseStrategy {
     FlashMessagesModule,
     ImageZoomModule,
     FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(),
-    AngularFireModule.initializeApp(environment.firebase),    
+    AngularFireModule.initializeApp(environment),    
     AngularFireDatabaseModule, // imports firebase/database, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     RouterModule.forRoot(appRoutes),    
