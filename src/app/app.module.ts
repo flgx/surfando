@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes,RouteReuseStrategy} from '@angular/router';
 import { FirebaseService } from './services/firebase.service';
 import { AppComponent } from './app.component';
@@ -39,6 +40,7 @@ import { environment } from '../environments/environment';
 import { Ng2FileRequiredModule } from 'ng2-file-required';
 import {ImageZoomModule} from 'angular2-image-zoom';
 import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
+import { Observable } from 'rxjs/Observable';
 
 const appRoutes: Routes = [
   {path: '', component: SearchComponent, data:{animation:Math.random()}},

@@ -4,7 +4,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from '../../shared/auth.service';
 import {FirebaseService} from '../../services/firebase.service';
 
-import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireAuth,AngularFireAuthModule} from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import {Observable} from 'rxjs';
 import { Injectable,Inject } from '@angular/core';
